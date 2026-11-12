@@ -954,6 +954,6 @@ EOT
     ])
     error_message = "must be between 8 and 123 characters"
   }
-  # Note: 88 additional provider-side validators are enforced at apply time but not mirrored as validation{} blocks here (bespoke or non-mechanically-translatable).
+  # Note: 87 additional provider-side validators are enforced at apply time but not mirrored as validation{} blocks here (bespoke or non-mechanically-translatable).
 }
 
