@@ -701,14 +701,6 @@ EOT
   validation {
     condition = alltrue([
       for k, v in var.kubernetes_clusters : (
-        v.dns_prefix == null || (length(v.dns_prefix) >= 2)
-      )
-    ])
-    error_message = "[from containerValidate.KubernetesDNSPrefix: invalid when len(value) < 2]"
-  }
-  validation {
-    condition = alltrue([
-      for k, v in var.kubernetes_clusters : (
         v.edge_zone == null || (length(v.edge_zone) > 0)
       )
     ])
@@ -954,6 +946,6 @@ EOT
     ])
     error_message = "must be between 8 and 123 characters"
   }
-  # Note: 87 additional provider-side validators are enforced at apply time but not mirrored as validation{} blocks here (bespoke or non-mechanically-translatable).
+  # Note: 86 additional provider-side validators are enforced at apply time but not mirrored as validation{} blocks here (bespoke or non-mechanically-translatable).
 }
 
