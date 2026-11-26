@@ -259,6 +259,7 @@ Optional:
     - oms_agent (block):
         - log_analytics_workspace_id (required)
         - msi_auth_for_monitoring_enabled (optional)
+        - retina_flow_logs_enabled (optional)
     - service_mesh_profile (block):
         - certificate_authority (optional, block):
             - cert_chain_object_name (required)
@@ -463,6 +464,7 @@ EOT
     oms_agent = optional(object({
       log_analytics_workspace_id      = string
       msi_auth_for_monitoring_enabled = optional(bool)
+      retina_flow_logs_enabled        = optional(bool)
     }))
     network_profile = optional(object({
       advanced_networking = optional(object({

@@ -412,6 +412,7 @@ resource "azurerm_kubernetes_cluster" "kubernetes_clusters" {
     content {
       log_analytics_workspace_id      = oms_agent.value.log_analytics_workspace_id
       msi_auth_for_monitoring_enabled = oms_agent.value.msi_auth_for_monitoring_enabled
+      retina_flow_logs_enabled        = oms_agent.value.retina_flow_logs_enabled
     }
   }
 
